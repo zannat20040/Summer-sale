@@ -1,0 +1,22 @@
+*{
+    font-family: 'Work Sans', sans-serif;
+}
+.banner{
+    background-color:#F9F6E2;
+}
+.main-content{
+    display: grid;
+    grid-template-columns: 75% 1fr;
+}
+.star-size{
+    width: 20px;
+}
+.cart ul li{
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 40px;
+}
+.cart ul li span{
+    color: #11111166;
+}
