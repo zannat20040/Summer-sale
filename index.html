@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme='light'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer sale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div>
+        <div class="flex justify-center gap-6">
+            <!-- product 1 -->
+            <div class="card w-96 bg-base-100 shadow-xl product" id="product1" onclick="getProductName('product1')">
+                <figure class=" bg-slate-300 h-52 m-5 flex justify-center items-center rounded-lg">
+                    <img src="./images/prod1.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+    
+                    <div class="rating">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+    
+                    <h2 class="card-title product-name1 product-name">K. Accessories!</h2>
+                    <p>49.00</p> <span>TK</span>
+                </div>
+            </div>
+            <!-- product 2 -->
+            <div class="card w-96 bg-base-100 shadow-xl product" id="product2" onclick="getProductName('product2')">
+                <figure class=" bg-slate-300 h-52 m-5 flex justify-center items-center rounded-lg">
+                    <img src="./images/prod1.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+    
+                    <div class="rating">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+    
+                    <h2 class="card-title product-name2 product-name">K. Home Cooker!</h2>
+                    <p>49.00</p> <span>TK</span>
+                </div>
+            </div>
+            <!-- product 3 -->
+            <div class="card w-96 bg-base-100 shadow-xl product" id="product3" onclick="getProductName('product3')">
+                <figure class=" bg-slate-300 h-52 m-5 flex justify-center items-center rounded-lg">
+                    <img src="./images/prod1.png" alt="Shoes" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+    
+                    <div class="rating">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+    
+                    <h2 class="card-title product-name3 product-name"> Home Cooker!</h2>
+                    <p>159.00</p> <span>TK</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class=" container mt-28 mx-auto ">
+            <ul id="cart-list">
+            </ul>
+            <hr>
+            <ul>
+                <li>Total price: <span id="total">00.00</span></li>
+                <li>Discount price: <span id="discount"></span></li>
+                <li>Total: <span id="after-discount"></span></li>
+            </ul>
+            <!-- <button class="btn btn-primary">Primary</button> -->
+        </div>
+    </div>
+
+    <script src="./product.js"></script>
+    <script src="./price.js"></script>
+
+</body>
+
+</html>
