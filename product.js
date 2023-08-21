@@ -38,11 +38,6 @@ function getProductName(id) {
 
 }
 
-document.getElementById('Refresh').addEventListener('click',function(){
-    window.onload
-})
-
-
 applyBtn.addEventListener('click',function(){
 
     let cupon = document.getElementById('cupon')
@@ -51,18 +46,38 @@ applyBtn.addEventListener('click',function(){
    
 
     if(cuponValue==='SELL20'){
+
+        if(){
+
+        }
+
         let discount = document.getElementById('discount')
         let discountPrice = newprice * (20 / 100)
     
         discount.innerText = discountPrice.toFixed(2)
-        // console.log(discountPrice)
     
         let afterDiscount = document.getElementById('after-discount')
         let finalPrice = newprice - discountPrice
     
         afterDiscount.innerText = finalPrice.toFixed(2)
-        // console.log(discountPrice)
         cupon.value =''
+        
     
     }
+    else{
+        let errorMsg = document.createElement("p")
+        errorMsg.innerText = 'Invalid Cupon Code'
+        errorMsg.classList.add('errorMsg')
+        document.getElementById('cuponSec').appendChild(errorMsg)
+        errorMsg.style.color = 'red'
+        errorMsg.style.textAlign = 'center'
+        errorMsg.style.marginTop= '10px'
+        errorMsg.style.fontWeight= 'bold'
+        cupon.value =''
+    }
 })
+
+
+// document.getElementById('Refresh').addEventListener('click',function(){
+//     location.reload()
+// })
