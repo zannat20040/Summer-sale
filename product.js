@@ -2,13 +2,11 @@ let count = 1
 let newprice = 0
 let applyBtn = document.getElementById('apply-btn')
 
-
 function getProductName(id) {
     let products = document.getElementById(id)
     let getName = products.childNodes[3].children[1]
 
     let productName = getName.innerText
-    // console.log(productName)
     let newlist = document.createElement('li')
 
     let insertElement = document.getElementById('cart-list').appendChild(newlist)
@@ -18,19 +16,13 @@ function getProductName(id) {
     let getPrice = products.childNodes[3].children[2]
 
     let price = parseFloat(getPrice.innerText)
-    // console.log(price)
-
     newprice += price
 
     let totalBox = document.getElementById('total')
     totalBox.innerText = newprice.toFixed(2)
-    // console.log(newprice)
 
     let afterDiscount = document.getElementById('after-discount')
-        
-    
         afterDiscount.innerText = newprice.toFixed(2)
-        // console.log(discountPrice)
 
     if (newprice >= 200) {
         applyBtn.removeAttribute('disabled')
@@ -42,14 +34,11 @@ applyBtn.addEventListener('click',function(){
 
     let cupon = document.getElementById('cupon')
     let cuponValue = cupon.value
-    console.log(cuponValue)
-   
+    let errorMsg = document.createElement("p")
 
     if(cuponValue==='SELL20'){
 
-        if(){
-
-        }
+        document.getElementById('errorMsg').style.display = 'none'
 
         let discount = document.getElementById('discount')
         let discountPrice = newprice * (20 / 100)
@@ -61,19 +50,12 @@ applyBtn.addEventListener('click',function(){
     
         afterDiscount.innerText = finalPrice.toFixed(2)
         cupon.value =''
-        
     
     }
     else{
-        let errorMsg = document.createElement("p")
-        errorMsg.innerText = 'Invalid Cupon Code'
-        errorMsg.classList.add('errorMsg')
-        document.getElementById('cuponSec').appendChild(errorMsg)
-        errorMsg.style.color = 'red'
-        errorMsg.style.textAlign = 'center'
-        errorMsg.style.marginTop= '10px'
-        errorMsg.style.fontWeight= 'bold'
         cupon.value =''
+        document.getElementById('errorMsg').style.display = 'block'
+        
     }
 })
 

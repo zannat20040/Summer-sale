@@ -20,3 +20,10 @@
 .cart ul li span{
     color: #11111166;
 }
+#errorMsg{
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    display: none;
+}
