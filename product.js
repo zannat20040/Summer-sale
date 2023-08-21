@@ -60,6 +60,6 @@ applyBtn.addEventListener('click',function(){
 })
 
 
-// document.getElementById('Refresh').addEventListener('click',function(){
-//     location.reload()
-// })
+document.getElementById('Refresh').addEventListener('click',function(){
+    location.reload()
+})
